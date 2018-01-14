@@ -5,7 +5,7 @@
 int main(int argc, char** argv)
 {
 	int c = 0;
-	http_global_data_type *gdata = NULL;
+	http_global_data_typedef *gdata = NULL;
 		
 	init_http_global_data();
 	gdata = get_http_global_data();
@@ -29,7 +29,7 @@ int main(int argc, char** argv)
 				break;
 			case 'p':
 				gdata->server_port = atoi(optarg);
-				printf("server port is %s", gdata->server_port);
+				printf("server port is %d", gdata->server_port);
 				break;
 			default:
 				break;
